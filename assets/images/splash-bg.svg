@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Gradients for fruits and splashes -->
+    <radialGradient id="orangeGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFB347;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C42;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <radialGradient id="mangoGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:0.9" />
+    </radialGradient>
+    
+    <radialGradient id="limeGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#98D8C8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7BC8A4;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <radialGradient id="berryGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E63946;stop-opacity:0.9" />
+    </radialGradient>
+    
+    <radialGradient id="watermelonGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF1744;stop-opacity:0.8" />
+    </radialGradient>
+    
+    <radialGradient id="lemonGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFE66D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.9" />
+    </radialGradient>
+    
+    <!-- Blur filters for splash effects -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#FFF8F0"/>
+  
+  <!-- Large splash elements (background layer) -->
+  
+  <!-- Orange splash - top left -->
+  <ellipse cx="200" cy="150" rx="250" ry="280" fill="url(#orangeGrad)" opacity="0.3" filter="url(#softBlur)">
+    <animate attributeName="ry" values="280;320;280" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="280" cy="200" rx="180" ry="200" fill="url(#orangeGrad)" opacity="0.25" filter="url(#softBlur)"/>
+  
+  <!-- Mango splash - top right -->
+  <ellipse cx="1650" cy="200" rx="300" ry="250" fill="url(#mangoGrad)" opacity="0.35" filter="url(#softBlur)">
+    <animate attributeName="rx" values="300;340;300" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="1580" cy="280" rx="200" ry="220" fill="url(#mangoGrad)" opacity="0.3" filter="url(#softBlur)"/>
+  
+  <!-- Lime splash - bottom left -->
+  <ellipse cx="250" cy="900" rx="320" ry="280" fill="url(#limeGrad)" opacity="0.4" filter="url(#softBlur)">
+    <animate attributeName="rx" values="320;360;320" dur="12s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="350" cy="850" rx="220" ry="240" fill="url(#limeGrad)" opacity="0.35" filter="url(#softBlur)"/>
+  
+  <!-- Berry splash - bottom right -->
+  <ellipse cx="1700" cy="880" rx="280" ry="300" fill="url(#berryGrad)" opacity="0.3" filter="url(#softBlur)">
+    <animate attributeName="ry" values="300;340;300" dur="9s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="1620" cy="920" rx="200" ry="180" fill="url(#berryGrad)" opacity="0.25" filter="url(#softBlur)"/>
+  
+  <!-- Center watermelon splash -->
+  <ellipse cx="960" cy="540" rx="400" ry="380" fill="url(#watermelonGrad)" opacity="0.25" filter="url(#softBlur)">
+    <animate attributeName="rx" values="400;450;400" dur="11s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="380;420;380" dur="11s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Smaller fruit elements (mid layer) -->
+  
+  <!-- Orange slices -->
+  <circle cx="450" cy="300" r="80" fill="url(#orangeGrad)" opacity="0.5" filter="url(#glow)">
+    <animate attributeName="cy" values="300;280;300" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1450" cy="750" r="70" fill="url(#orangeGrad)" opacity="0.45" filter="url(#glow)">
+    <animate attributeName="cx" values="1450;1470;1450" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Lemon circles -->
+  <circle cx="800" cy="200" r="65" fill="url(#lemonGrad)" opacity="0.5" filter="url(#glow)">
+    <animate attributeName="r" values="65;75;65" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1200" cy="850" r="60" fill="url(#lemonGrad)" opacity="0.48" filter="url(#glow)">
+    <animate attributeName="cy" values="850;830;850" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Lime circles -->
+  <circle cx="600" cy="700" r="75" fill="url(#limeGrad)" opacity="0.52" filter="url(#glow)">
+    <animate attributeName="cx" values="600;620;600" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1350" cy="350" r="68" fill="url(#limeGrad)" opacity="0.48" filter="url(#glow)">
+    <animate attributeName="r" values="68;78;68" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Berry circles -->
+  <circle cx="350" cy="500" r="55" fill="url(#berryGrad)" opacity="0.5" filter="url(#glow)">
+    <animate attributeName="cy" values="500;520;500" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1550" cy="550" r="62" fill="url(#berryGrad)" opacity="0.48" filter="url(#glow)">
+    <animate attributeName="cx" values="1550;1530;1550" dur="9s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Small splash details (top layer) -->
+  
+  <!-- Droplet shapes -->
+  <ellipse cx="720" cy="450" rx="30" ry="45" fill="url(#mangoGrad)" opacity="0.6" filter="url(#glow)">
+    <animate attributeName="cy" values="450;430;450" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="1100" cy="280" rx="35" ry="50" fill="url(#orangeGrad)" opacity="0.58" filter="url(#glow)">
+    <animate attributeName="cy" values="280;300;280" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="500" cy="600" rx="28" ry="42" fill="url(#limeGrad)" opacity="0.6" filter="url(#glow)">
+    <animate attributeName="cx" values="500;520;500" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="1400" cy="650" rx="32" ry="48" fill="url(#watermelonGrad)" opacity="0.58" filter="url(#glow)">
+    <animate attributeName="cy" values="650;670;650" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="900" cy="750" rx="30" ry="44" fill="url(#berryGrad)" opacity="0.6" filter="url(#glow)">
+    <animate attributeName="cx" values="900;880;900" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Tiny bubbles for freshness effect -->
+  <circle cx="650" cy="350" r="15" fill="#FFFFFF" opacity="0.5">
+    <animate attributeName="cy" values="350;330;350" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="1250" cy="450" r="12" fill="#FFFFFF" opacity="0.48">
+    <animate attributeName="cy" values="450;470;450" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="450" cy="750" r="18" fill="#FFFFFF" opacity="0.52">
+    <animate attributeName="cx" values="450;470;450" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="1500" cy="480" r="14" fill="#FFFFFF" opacity="0.5">
+    <animate attributeName="cy" values="480;500;480" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="800" cy="600" r="16" fill="#FFFFFF" opacity="0.5">
+    <animate attributeName="cx" values="800;820;800" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Additional decorative elements -->
+  <path d="M 1000,400 Q 1020,380 1040,400 T 1080,400" stroke="url(#lemonGrad)" stroke-width="8" fill="none" opacity="0.4" filter="url(#glow)">
+    <animate attributeName="d" values="M 1000,400 Q 1020,380 1040,400 T 1080,400; M 1000,410 Q 1020,390 1040,410 T 1080,410; M 1000,400 Q 1020,380 1040,400 T 1080,400" dur="8s" repeatCount="indefinite"/>
+  </path>
+  
+  <path d="M 300,650 Q 320,670 340,650 T 380,650" stroke="url(#berryGrad)" stroke-width="7" fill="none" opacity="0.4" filter="url(#glow)">
+    <animate attributeName="d" values="M 300,650 Q 320,670 340,650 T 380,650; M 300,660 Q 320,680 340,660 T 380,660; M 300,650 Q 320,670 340,650 T 380,650" dur="9s" repeatCount="indefinite"/>
+  </path>
+</svg>
